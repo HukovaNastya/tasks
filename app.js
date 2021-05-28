@@ -97,7 +97,7 @@ console.log(arrayOfMissionsNames);
 //2
 
 const arrayOfPayloadIds = missions.map( mision => mision.payload_ids);
-const arrayPayloadIdsToArray =arrayOfPayloadIds.flat();
+const arrayPayloadIdsToArray = arrayOfPayloadIds.flat();
 console.log(arrayPayloadIdsToArray);
 
 //3
