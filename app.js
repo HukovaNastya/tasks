@@ -91,8 +91,14 @@ const missions = [
   }
 ];
 
-const arrayOfMissionsNames = missions.map( miision => miision.mission_name);
+const arrayOfMissionsNames = missions.map( mision => mision.mission_name);
 console.log(arrayOfMissionsNames);
 
 //2
+
+const arrayOfPayloadIds = missions.map( mision => mision.payload_ids);
+const arrayPayloadIdsToArray =arrayOfPayloadIds.flat();
+console.log(arrayPayloadIdsToArray);
+
+//3
 
