@@ -143,3 +143,26 @@ const users = [
 const usersInfo = users.map(user => ({_id: user._id, name: user.name, isActive: user.isActive, balance: user.balance }));
 console.log(usersInfo);
 
+//2
+
+function search(value, array) {
+  // if( typeof value !== String || typeof value !== Number || value === " ") {
+  //   return;
+  // }
+  return array.filter(function (user) {
+      return Object.keys(user).some(function (item) {
+          return user[item].toString().indexOf(value) !== -1;
+      });
+  });
+}
+
+console.log(search( 'estradadavenport@ebidco.com', users));
+
+//3
+
+
+function equalsSimple(obj, other){
+  if( typeof obj !== Object ||  typeof other !== Object ){
+    return;
+  }
+}
