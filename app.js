@@ -146,9 +146,9 @@ console.log(usersInfo);
 //2
 
 function search(value, array) {
-  // if( typeof value !== String || typeof value !== Number || value === " ") {
-  //   return;
-  // }
+  if( typeof value !== String || typeof value !== Number || value === " ") {
+    return;
+  }
   return array.filter(function (user) {
       return Object.keys(user).some(function (item) {
           return user[item].toString().indexOf(value) !== -1;
@@ -158,11 +158,69 @@ function search(value, array) {
 
 console.log(search( 'estradadavenport@ebidco.com', users));
 
-//3
+//Function
+//1
 
-
-function equalsSimple(obj, other){
-  if( typeof obj !== Object ||  typeof other !== Object ){
-    return;
+function twoSum( mass, number){
+  const result = [];
+  for( let i = 0; i< mass.length; i++){
+    for(let j = i+1; j< mass.length; j++){
+      if(mass[i] + mass[j] === number){
+        result.push(i);
+        result.push(j);
+      }
+    }
   }
+
+  return result;
 }
+console.log(twoSum([2, 4, 1, 5, 7], 8));
+console.log(twoSum([2, 4, 1, 5, 7], 3));
+
+//2
+const memo = 1;
+
+function memoize2(num) {
+  return num + memo;
+}
+
+
+console.log(memoize2(1));
+console.log(memoize2(1));
+console.log(memoize2(5));
+console.log(memoize2(5));
+
+
+//2
+let memoize = (function() {
+ let obj = {};
+
+  function m(number) {
+    let counter = 1;
+
+    if (number in obj) {
+      counter = obj[number];
+      return number;
+    } else  if (number === 0 || number === 1) {
+      counter = number;
+      return number;
+    }
+      else {
+        number += 1;
+        obj[number] = counter;
+        return number;
+      }
+
+    // return counter;
+  }
+  return m;
+})();
+
+
+console.log(memoize(1));
+console.log(memoize(2));
+console.log(memoize(6));
+console.log(memoize(6));
+console.log(memoize(4));
+console.log(memoize(4));
+
