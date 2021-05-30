@@ -224,3 +224,17 @@ console.log(memoize(6));
 console.log(memoize(4));
 console.log(memoize(4));
 
+//3
+const minus = x => x - 8;
+const mult = x => x * 3;
+const tern = (x,y) => (y > 0 ? x + 3 : x - 3);
+const compose = (...fns) => x => fns.reduce((acc, fn) => fn(acc), x);
+
+const withСompose2 = compose(
+  minus,
+  mult,
+  tern
+);
+console.log(withСompose2(3));
+
+//4
