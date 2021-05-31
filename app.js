@@ -171,7 +171,6 @@ function twoSum( mass, number){
       }
     }
   }
-
   return result;
 }
 console.log(twoSum([2, 4, 1, 5, 7], 8));
@@ -194,10 +193,8 @@ console.log(memoize2(5));
 //2
 let memoize = (function() {
  let obj = {};
-
   function m(number) {
     let counter = 1;
-
     if (number in obj) {
       counter = obj[number];
       return number;
@@ -210,8 +207,6 @@ let memoize = (function() {
         obj[number] = counter;
         return number;
       }
-
-    // return counter;
   }
   return m;
 })();
@@ -238,3 +233,69 @@ const withСompose2 = compose(
 console.log(withСompose2(3));
 
 //4
+
+// function calc(firstNumber, secondNumber, operation, result){
+//   let resultOperation;
+//   if(operation === '+') {
+//     resultOperation = firstNumber + secondNumber;
+//     if(resresultOperation !== result) return false;
+//   return true;
+//   }
+//   else if (operation === '-') {
+//     resultOperation = firstNumber - secondNumber;
+//     if(resresultOperation !== result) return false;
+//   return true;
+//   } else if (operation === '*'){
+//     resultOperation = firstNumber * secondNumber;
+//     if(resresultOperation !== result) return false;
+//   return true;
+//   } else if (operation === '/'){
+//     resultOperation = firstNumber / secondNumber;
+//     if(resresultOperation !== result) return false;
+//   return true;
+// }
+// };
+
+// console.log(calc(1,2, '+',4));
+function count(num1, num2, operation, result) {
+  let res1;
+  switch (operation) {
+    case "*":
+       res1 = num1 * num2;
+      if( res1 === result){
+        return true;
+      }
+      else{
+        return false;
+      }
+    case "+":
+       res1 = num1 + num2;
+      if( res1 === result){
+        return true;
+      }
+      else{
+        return false;
+      }
+    case "-":
+       res1 = num1 - num2;
+      if( res1 === result){
+        return true;
+      }
+      else{
+        return false;
+      }
+    case "/":
+      if (num2 !== 0) {
+        res1 = num1 / num2;
+        if( res1 === result){
+          return true;
+        }
+        else{
+          return false;
+        }
+      } else {
+        return "не делится на нуль";
+      }
+  }
+}
+console.log(count(3,2,'-',5));
