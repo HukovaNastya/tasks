@@ -158,6 +158,9 @@ function search(value, array) {
 
 console.log(search( 'estradadavenport@ebidco.com', users));
 
+//3
+
+
 //Function
 //1
 
@@ -234,29 +237,6 @@ console.log(withСompose2(3));
 
 //4
 
-// function calc(firstNumber, secondNumber, operation, result){
-//   let resultOperation;
-//   if(operation === '+') {
-//     resultOperation = firstNumber + secondNumber;
-//     if(resresultOperation !== result) return false;
-//   return true;
-//   }
-//   else if (operation === '-') {
-//     resultOperation = firstNumber - secondNumber;
-//     if(resresultOperation !== result) return false;
-//   return true;
-//   } else if (operation === '*'){
-//     resultOperation = firstNumber * secondNumber;
-//     if(resresultOperation !== result) return false;
-//   return true;
-//   } else if (operation === '/'){
-//     resultOperation = firstNumber / secondNumber;
-//     if(resresultOperation !== result) return false;
-//   return true;
-// }
-// };
-
-// console.log(calc(1,2, '+',4));
 function count(num1, num2, operation, result) {
   let res1;
   switch (operation) {
