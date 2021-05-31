@@ -159,8 +159,51 @@ function search(value, array) {
 console.log(search( 'estradadavenport@ebidco.com', users));
 
 //3
+function equalsSimple (obj1, obj2){
+  return JSON.stringify(obj1) === JSON.stringify(obj2);
+}
 
+console.log(equalsSimple(
+  {
+    a: 2,
+    b: "2",
+    c: false,
+    g: [
+      { a: { j: undefined } },
+      { a: 2, b: "2", c: false, g: [{ a: { j: undefined } }] }
+    ]
+  },
+  {
+    a: 2,
+    b: "2",
+    c: false,
+    g: [
+      { a: { j: undefined } },
+      { a: 2, b: "3", c: false, g: [{ a: { j: undefined } }] }
+    ]
+  }
+)); //
 
+console.log(equalsSimple(
+  {
+    a: 2,
+    b: "2",
+    c: false,
+    g: [
+      { a: { j: undefined } },
+      { a: 2, b: "2", c: false, g: [{ a: { j: undefined } }] }
+    ]
+  },
+  {
+    a: 2,
+    b: "2",
+    c: false,
+    g: [
+      { a: { j: undefined } },
+      { a: 2, b: "2", c: false, g: [{ a: { j: undefined } }] }
+    ]
+  }
+));
 //Function
 //1
 
